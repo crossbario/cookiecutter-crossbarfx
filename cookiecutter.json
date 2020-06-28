@@ -1,0 +1,17 @@
+{
+    "service_title": "Crossbar.io FX",
+    "service_name": "crossbarfx",
+
+    "architecture": ["amd64", "armhf", "aarch64"],
+    "runtime": ["cpy3", "pypy3"],
+    "version": ["20.6.2.dev2"],
+    "image": "{{ 'crossbario/crossbarfx' + ('' if cookiecutter.architecture == 'amd64' else ('-' + cookiecutter.architecture)) + ':' + cookiecutter.runtime + '-' + cookiecutter.version + '-slim'}}",
+
+    "realm": "realm1",
+    "port": 8080,
+    "docroot": "..",
+
+    "uid": null,
+    "service_uuid": null,
+    "generated": null
+}
